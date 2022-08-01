@@ -35,7 +35,7 @@ int lex(void);
 #define UNKNOWN 99
 
 // Literals
-#define INT_LIT 10		// C-Style Integer Literals
+#define INT_LIT 10	// C-Style Integer Literals
 #define FLOATING_LIT 14 // C-Style Floating point literals
 
 /* Token codes */
