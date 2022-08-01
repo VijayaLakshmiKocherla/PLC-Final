@@ -35,7 +35,7 @@ int lex(void);
 #define UNKNOWN 99
 
 // Literals
-#define INT_LIT 10		// C-Style Integer Literals
+#define INT_LIT 10	// C-Style Integer Literals
 #define FLOATING_LIT 14 // C-Style Floating point literals
 
 /* Token codes */
@@ -150,10 +150,6 @@ int lookup(char ch)
 	case '=':
 		addChar();
 		nextToken = ASSIGN_OP;
-		break;
-	case '/':
-		addChar();
-		nextToken = DIV_OP;
 		break;
 	case '{':
 		addChar();
@@ -285,7 +281,7 @@ int lex(void)
 	} /* End of switch */
 
 	// Creating an ordered list of tokens
-	token_array[i] = nextToken;
+	token_list[i] = nextToken;
 	i++;
 
 	printf("Next token is: %d, Next lexeme is %s\n",
