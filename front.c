@@ -151,10 +151,6 @@ int lookup(char ch)
 		addChar();
 		nextToken = ASSIGN_OP;
 		break;
-	case '/':
-		addChar();
-		nextToken = DIV_OP;
-		break;
 	case '{':
 		addChar();
 		nextToken = OPEN_BLOCK;
@@ -285,7 +281,7 @@ int lex(void)
 	} /* End of switch */
 
 	// Creating an ordered list of tokens
-	token_array[i] = nextToken;
+	token_list[i] = nextToken;
 	i++;
 
 	printf("Next token is: %d, Next lexeme is %s\n",
